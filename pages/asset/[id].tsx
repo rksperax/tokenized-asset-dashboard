@@ -6,9 +6,7 @@ import useAssetDetailStore from "@/store/useAssetDetailStore";
 const AssetPage: React.FC = () => {
   const router = useRouter();
   const { id } = router.query; // Get asset ID from URL
-  const { asset, fetchAssetDetail } = useAssetDetailStore();
-
-  console.log({ asset });
+  const { asset, fetchAssetDetail, error } = useAssetDetailStore();
 
   useEffect(() => {
     if (id) {
@@ -16,6 +14,13 @@ const AssetPage: React.FC = () => {
     }
   }, [fetchAssetDetail, id]);
 
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen text-gray-500">
+        <p>{error}</p>
+      </div>
+    );
+  }
   if (!asset) {
     return (
       <div className="flex flex-col items-center justify-center h-screen text-gray-500">

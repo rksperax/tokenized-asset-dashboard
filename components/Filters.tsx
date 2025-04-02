@@ -29,7 +29,7 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange, filtersValue }) => {
     <div className="flex flex-col md:flex-row gap-4 p-4 border rounded-lg shadow-sm">
       {/* Asset Type Filter */}
       <select
-        value={filtersValue.type}
+        value={type}
         onChange={(e) => {
           handleFilterChange(e.target.value, minPrice, maxPrice);
         }}
@@ -43,7 +43,7 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange, filtersValue }) => {
       {/* Min Price Filter */}
       <input
         type="number"
-        value={filtersValue.minPrice || ""}
+        value={minPrice || ""}
         onChange={(e) => {
           const value = e.target.value === "" ? "" : Number(e.target.value);
           handleFilterChange(type, value, maxPrice);
@@ -55,7 +55,7 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange, filtersValue }) => {
       {/* Max Price Filter */}
       <input
         type="number"
-        value={filtersValue.maxPrice}
+        value={maxPrice === Number.MAX_VALUE ? "" : maxPrice}
         onChange={(e) => {
           const value = e.target.value === "" ? "" : Number(e.target.value);
           handleFilterChange(type, minPrice, value);

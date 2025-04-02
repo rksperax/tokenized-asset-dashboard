@@ -4,18 +4,16 @@ export const fetchAssetDetail = async (id: string) => {
   try {
     const response = await fetch(API_URL(id));
 
-    if (!response.ok) {
-      throw new Error(`API Error: ${response.statusText}`);
-    }
+    // if (!response.ok) {
+    //   throw new Error(`API Error: ${response.statusText}`);
+    // }
 
     const data = await response.json();
 
-    // Transform API response to match our Asset type
-
     return data;
   } catch (error) {
-    console.error("Error fetching assets:", error);
-    return null; // Return null in case of error
+    console.log("API error", error);
+    throw new Error("429 (Too Many Requests)");
   }
 };
 
