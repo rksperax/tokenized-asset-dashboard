@@ -1,45 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+
+# Tokenized Asset Dashboard
+
+
+## App Functionalities
+
+1. A grid of tokenized assets with asset name, token id, asset type,current value and thumbnail.
+2. Added Search bar to search by name and token id.
+3. Filter Type and price filter
+4. Added detailed screen with additional information like asset description and price trend based on 1D,1W,1M and 1Y.
+5. Added polling using set interval to get refresh data every 30s (increased timer because of coingecko app limit).
+5. Handled error like 429 api uses limit.
+6. Added page loader
+7. Responsive for mobile and desktop devices.
+8. Wallet connect button to enable Metamask wallet connection.
+
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. npm install or yarn install
+2. npm run dev or yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
 
 
+## Tech Stack Used
+
+- **Frontend Framework**: Next.js (for SSR/SSG benefits) a framework based on react
+
+- **UI Library**: Tailwind CSS (for rapid styling)
+
+- **State Management**: Zustand (lightweight state management)
+
+- **API Integration**: CoinGecko (to simulate tokenized asset data)
+
+- **Real-time Updates**: Polling with setInterval
+
+- **Wallet Connection Simulation**: ethers.js for wallet connection
+
+
+## Project structure
+
+
+```bash
 │── /components
 │   ├── AssetCard.tsx
 │   ├── AssetDetails.tsx
@@ -60,3 +65,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/b
 │── package.json
 │── tsconfig.json
 │── next.config.js
+
+```
