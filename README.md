@@ -19,11 +19,12 @@
 
 ## Getting Started
 
-First, run the development server:
+Use the following commands to run:
 
 ```bash
 1. npm install or yarn install
 2. npm run dev or yarn dev
+3. Visit http://localhost:3000 on your local browser
 ```
 
 
