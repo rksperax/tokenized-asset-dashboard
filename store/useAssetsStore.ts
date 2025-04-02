@@ -21,9 +21,9 @@ const useAssetsStore = create<AssetsStore>((set) => ({
   },
 }));
 
-// Polling every 10 seconds
+// Polling every 30 seconds
 setInterval(() => {
   useAssetsStore.getState().fetchAssets();
-}, 10000);
+}, 30000);
 
 export default useAssetsStore;

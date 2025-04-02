@@ -21,11 +21,10 @@ const useAssetDetailStore = create<AssetsStore>((set) => ({
   },
 }));
 
-// Polling every 10 seconds
+// Polling every 30 seconds
 setInterval(() => {
-    console.log({window})
-  const id = window.location.pathname.split("/")[2]
+  const id = window.location.pathname.split("/")[2];
   useAssetDetailStore.getState().fetchAssetDetail(id);
-}, 10000);
+}, 30000);
 
 export default useAssetDetailStore;
