@@ -10,7 +10,6 @@ const ITEMS_PER_PAGE = 12; // Adjust as needed
 
 const Dashboard: React.FC = () => {
   const { assets, fetchAssets, error } = useAssetsStore();
-  console.log({ error, assets });
   const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState({
     type: "",

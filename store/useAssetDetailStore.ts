@@ -13,7 +13,7 @@ const useAssetDetailStore = create<AssetsStore>((set) => ({
   error: null,
   fetchAssetDetail: async (id) => {
     try {
-      const data = await fetchAssetDetail(id); // Fetch assets from API or mock JSON
+      const data = await fetchAssetDetail(id); // Fetch assets from API
       set({ asset: data, error: null });
     } catch (error: any) {
       set({ error: error.message });

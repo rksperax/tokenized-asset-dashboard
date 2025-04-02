@@ -13,7 +13,7 @@ const useAssetsStore = create<AssetsStore>((set) => ({
   error: null,
   fetchAssets: async () => {
     try {
-      const data = await fetchAssets(); // Fetch assets from API or mock JSON
+      const data = await fetchAssets(); // Fetch assets from API 
       set({ assets: data, error: null });
     } catch (error: any) {
       set({ error: error.message });
