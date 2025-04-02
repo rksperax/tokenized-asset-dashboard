@@ -68,7 +68,7 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange, filtersValue }) => {
         onClick={() => {
           onFilterChange({ type: "", minPrice: 0, maxPrice: Infinity });
         }}
-        className="bg-gray-200 px-4 py-2 rounded-md hover:bg-gray-300">
+        className="bg-gray-200 px-4 py-2 rounded-md hover:bg-gray-300 text-black">
         Reset
       </button>
     </div>
