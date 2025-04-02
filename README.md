@@ -1,5 +1,7 @@
 
-# Tokenized Asset Dashboard
+# Tokenized Asset Dashboard 
+(Demo link: https://tokenized-asset-dashboard.vercel.app/)
+
 
 
 ## App Functionalities
@@ -28,7 +30,7 @@ First, run the development server:
 
 ## Tech Stack Used
 
-- **Frontend Framework**: Next.js (for SSR/SSG benefits) a framework based on react
+- **Frontend Framework**: Next.js (for SSR/SSG benefits) a framework based on react with typescript
 
 - **UI Library**: Tailwind CSS (for rapid styling)
 
