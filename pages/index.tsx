@@ -19,10 +19,11 @@ const Dashboard: React.FC = () => {
 
   const [filteredAssets, setFilteredAssets] = useState<Asset[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  console.log({ assets });
   useEffect(() => {
-    fetchAssets();
-  }, [fetchAssets]);
+    if (!assets.length) {
+      fetchAssets();
+    }
+  }, [fetchAssets, assets]);
 
   useEffect(() => {
     let updatedAssets = assets;

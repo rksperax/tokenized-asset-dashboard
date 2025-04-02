@@ -57,7 +57,7 @@ const AssetDetails: React.FC<AssetDetailsProps> = ({ asset }) => {
       {/* Asset Image */}
       <div className="flex justify-center">
         <Image
-          src={asset.image.large || "/images/placeholder.png"}
+          src={asset.image?.large || "/images/placeholder.png"}
           alt={asset.name}
           width={300}
           height={300}

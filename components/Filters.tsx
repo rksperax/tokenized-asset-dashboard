@@ -35,9 +35,8 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange, filtersValue }) => {
         }}
         className="border p-2 rounded-md">
         <option value="">All Types</option>
-        <option value="Art">Art</option>
-        <option value="Real Estate">Real Estate</option>
-        <option value="Collectible">Collectible</option>
+        <option value="Cryptocurrency">Cryptocurrency</option>
+        <option value="Smart Contract Platform">Smart Contract Platform</option>
       </select>
 
       {/* Min Price Filter */}
